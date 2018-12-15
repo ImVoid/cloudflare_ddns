@@ -9,4 +9,4 @@ RUN apk update \
 COPY ddns.sh /usr/local/bin/
 RUN chmod a+x /usr/local/bin/ddns.sh
 
-CMD ["/bin/sh", "-c", "echo 'ddns is running...';while true;do ddns.sh;sleep 600;done"]
+CMD ["/bin/sh", "-c", "echo 'ddns is running...';while true;do sleep 10;done"]
