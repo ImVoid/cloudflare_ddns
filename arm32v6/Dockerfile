@@ -1,9 +1,9 @@
 FROM arm32v6/alpine:3.8
 MAINTAINER liuweijian
 
-RUN echo "http://mirrors.aliyun.com/alpine/v3.8/main/" > /etc/apk/repositories
+RUN echo "http://mirrors.aliyun.com/alpine/v3.8/main/" > /etc/apk/repositories \
     && echo "http://mirrors.aliyun.com/alpine/v3.8/community/" >> /etc/apk/repositories
-RUN apk update
+RUN apk update \
     && apk add --no-cache \
         curl \
         jq
