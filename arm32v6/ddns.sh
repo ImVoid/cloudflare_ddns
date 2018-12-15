@@ -11,4 +11,4 @@ curl -X PUT "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records/`
      -H "X-Auth-Email: ${EMAIL}" \
      -H "X-Auth-Key: ${KEY}" \
      -H "Content-Type: application/json" \
-     --data '{"type":"A","name":"cn.airfree.top","content":"`curl api.ipify.org`","ttl":120,"proxied":false}'
+     --data "{\"type\":\"A\",\"name\":\"${DOMAIN}\",\"content\":\"`curl api.ipify.org`\",\"ttl\":120,\"proxied\":false}"
