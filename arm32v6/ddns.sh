@@ -7,7 +7,7 @@ curl -s -X GET "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_record
      -H "Content-Type: application/json" | jq -r ".result | .[0] | .id" > /tmp/data.json
 
 # 更新记录
-curl -X PUT "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/`cat /tmp/data.json`" \
+curl -X PUT "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records/`cat /tmp/data.json`" \
      -H "X-Auth-Email: ${EMAIL}" \
      -H "X-Auth-Key: ${KEY}" \
      -H "Content-Type: application/json" \
