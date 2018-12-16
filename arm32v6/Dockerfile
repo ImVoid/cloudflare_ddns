@@ -1,4 +1,4 @@
-FROM cmosh/alpine-arm:3.3
+FROM liuweijian/alpine-arm:3.8
 MAINTAINER liuweijian
 
 RUN [ "cross-build-start" ]
